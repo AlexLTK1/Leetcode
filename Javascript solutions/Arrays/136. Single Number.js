@@ -3,6 +3,15 @@
  * @return {number}
  */
  var singleNumber = function(nums) {
-    // create a hashmap, then store key value as how many times we've seen each nums
-    // return the single one.
+    // create a set, delete if num is in the set, add otherwise.
+    // then the only digit left is the single num.
+    let set = new Set();
+
+    for (let num of nums) {
+        if (set.has(num)) {
+            set.delete(num);
+        } else {
+            set.add(num);
+        }
+    } return Array.from(set)[0];
 };
