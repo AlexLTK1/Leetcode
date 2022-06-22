@@ -12,8 +12,9 @@
     for (let i = 0; i < nums.length; i++) {
         set.delete(nums[i]);
     } return Array.from(set.values());
+    
 
 };
 
 // create a list and delete all the number in nums, 
-// turn it back to array as our result
+// turn it back to array as our result.
